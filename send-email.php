@@ -1,19 +1,31 @@
 <?php
-   //Variáveis que recebem os dados digitados no formulário pelo id atribuído nos input
-   $nome = $POST[nome]; 
-   $email = $POST[email];
-   $mensagem = $POST[mensagem];
- 
-   $to = "eduardolima384@gmail.com";
-   $subject = "CONTATO PELO SITE";   
-   $headers = "De:". $email;
+// Destinatário
+$para = "eduardolima384@gmail.com";
 
-   //funcao que realiza o envio do email
-    $envio = mail($to, $subject, $mensagem, $headers);
+// Assunto do e-mail
+$assunto = "Contato do através do site ...";
 
-    //verifica se foi enviado com sucesso!
-    if($envio)
-    echo "Mensagem enviada com sucesso";
-    else
-    echo "A mensagem não pode ser enviada";
+// Campos do formulário de contato
+$nome = $_POST['campo_nome'];
+$email = $_POST['campo_email'];
+$mensagem = $_POST['msg'];
+
+// Monta o corpo da mensagem com os campos
+$corpo = "<html><body>";
+$corpo .= "Nome: $nome ";
+$corpo .= "Email: $email  Mensagem: $mensagem";
+$corpo .= "</body></html>";
+
+// Cabeçalho do e-mail
+$email_headers = implode("\n", array("From: $nome", "Reply-To: $email", "Subject: $assunto", "Return-Path: $email", "MIME-Version: 1.0", "X-Priority: 3", "Content-Type: text/html; charset=UTF-8"));
+
+//Verifica se os campos estão preenchidos para enviar então o email
+if (!empty($nome) && !empty($email) && !empty($mensagem)) {
+    mail($para, $assunto, $corpo, $email_headers);
+    $msg = "Sua mensagem foi enviada com sucesso.";
+    echo "<script>alert('$msg');window.location.assign('https://abaout.herokuapp.com/');</script>";
+} else {
+    $msg = "Erro ao enviar a mensagem.";
+    echo "<script>alert('$msg');window.location.assign('https://abaout.herokuapp.com/');</script>";
+}
 ?>
