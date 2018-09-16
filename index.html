@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> EDUARDO LIMA </title>
+    <meta name="description" content="CV EDUARDO LIMA">
+    <meta name="author" content="Eduardo lima">
+    <link rel="stylesheet" href="./css/stilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" integrity="sha384-DmABxgPhJN5jlTwituIyzIUk6oqyzf3+XuP7q3VfcWA2unxgim7OSSZKKf0KSsnh"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+
+<!--CABECALHO-->
+
+<body>
+    <header class="cabecalho">
+        <button class="open-menu" onclick="abrirMenu()"> <i class="fas fa-bars"></i> </button>
+        <nav class="menu" id="id-menu">
+            <a class="close-menu" onclick="fecharMenu()"><i class="far fa-times-circle"></i></a>
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">EDUCATION</a></li>
+                <li><a href="#">SKILLS</a></li>
+                <li><a href="#">EXPERIENCE</a></li>
+                <li><a href="#">REFERENCE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+    </header>
+</body>
+
+
+<!--BANNER-->
+<div class="banner">
+    <div class="title">
+        <a href="#"><img src="./images/edu4.jpg" alt=""></a>
+        <h2>EDUARDO LIMA</h2>
+        <h3>Teste os seus limites, enfrente os seus medos e não deixe que nada impeça você de pelo menos tentar!</h3>
+        <button class="btn-cv"> Download CV <i class="fas fa-arrow-alt-circle-down"></i></button>
+    </div>
+</div>
+
+<!--CONTEUDO PRINCIPAL-->
+<section class="conteudo-principal">
+
+    <!--ABAOUT-->
+    <article class="about">
+        <a href="#"> <img src="" alt=""></a>
+        <h4> ABOUT </h4>
+        <p class="formacao">Graduando do 7º semestre do curso de Engenharia da computação pela Universidade Federal do Pará</p>
+        <p> Participação em vários projetos de iniciação científica, atualmete vinculado pelo segundo ano consecutivo no PIBIC</p>
+        <p>Facilidade de tarablahar em equipe, responsavel, dinâmico e com interesses em novos conhecimentos e crescer profissionalmente.</p>
+       
+    
+    </div>
+    </article>
+
+    <!--SKILLS-->
+    <article class="skills">
+        <h4> SKILLS </h4>
+        <canvas id="myChart"> </canvas>
+        <p> Devido experiências adquiridas durante todo este longo peridodo de aprendizado na gradução, desenvolvi alguns projetos ultilizando as tecnologias apresentadas acima, as quais atualmente tenho um certo domínio</p>
+        </div>
+    </article>
+
+    <!--EXPERIENCE-->
+    <article class="experience" >
+        <h4> EXPERIENCE </h4>
+        <p> experiências com trabalho em equipe, pesquisa científica e analíse e desenvolvimento de software juntamente com alunos do Progama de Mestrado UFPA/NDAE </p>
+        <p> Atualmete trabalho como freelancer na àrea de Desevolvimento mobile "Andorid/Java" na empresa Delphos Automação localizada em Tucuruí-PA </p>
+        </div>
+    </article>
+
+</section>
+
+<!--CONTATO-->
+<section class="contato">
+    <h2> CONTACT </h2>
+    <h3> Receba novidades, dicas e muito mais </h3>
+    <form>
+        <input type="text" name="message" placeholder="message">
+        <input type="email" name="email" placeholder="your email">
+        <button> Enviar </button>
+    </form>
+</section>
+
+<!--RODAPE-->
+<footer class="rodape">
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="copyright">
+        Copyright © Eduardo lima 2018. Todos os direitos reservados.
+    </p>
+</footer>
+
+<script>
+    function abrirMenu() {
+        document.getElementById("id-menu").style.display = "block";
+    }
+    function fecharMenu() {
+        document.getElementById("id-menu").style.display = "none";
+    }
+
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ["Java", "JavaScript", "Nodejs", "CSS", "HTML", "C", "C++"],
+            datasets: [{
+                label: "My Skills",
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [9, 5, 6, 5, 5, 8, 3],
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+
+</script>
+
+</html>
