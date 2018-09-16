@@ -3,10 +3,17 @@
    $nome = $POST[nome]; 
    $email = $POST[email];
    $mensagem = $POST[mensagem];
+ 
+   $to = "eduardolima384@gmail.com";
+   $subject = "CONTATO PELO SITE";   
+   $headers = "De:". $email;
 
-mail (
-    "eduardolima384@gmail.com", //Endereço que vai receber a mensagem
-    "Nome: $nome
-     Email: $email
-     Mensagem: $mensagem", "FROM:$nome<$email>");
+   //funcao que realiza o envio do email
+    $envio = mail($to, $subject, $mensagem, $headers);
+
+    //verifica se foi enviado com sucesso!
+    if($envio)
+    echo "Mensagem enviada com sucesso";
+    else
+    echo "A mensagem não pode ser enviada";
 ?>
