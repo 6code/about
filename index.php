@@ -83,7 +83,7 @@
 <!--CONTATO-->
 <section class="contact">
     <h4>CONTACT</h4>
-    <form autocomplete="off" action="send-mail.php">
+    <form autocomplete="off" action="send-email.php">
         <fieldset>
             <input class="campo_nome" type="text"  placeholder=" Nome ">
             <input class="campo_email" type="email"  placeholder=" Email ">
