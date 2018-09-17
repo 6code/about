@@ -147,15 +147,6 @@ img {
     width: 50%;
     height: 50%;
     border-radius: 100px;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.banner image hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
 }
 
 /*===========ABOUT===============*/
@@ -197,6 +188,7 @@ img {
 }
 
 .skills h4 {
+    margin-top: 15%;
     padding: 3%;
     text-align: center;
     color: rgb(221, 213, 213);
@@ -367,29 +359,212 @@ img {
     }
     /*==============================*/
     /*===========BANNER===============*/
-    .title {
-        padding: 10%;
+    .banner {
         width: 100%;
+        height: 900px;
+        background: url("../images/bg.jpg") no-repeat fixed;
+    }
+    .title {
+        width: 100%;
+        text-shadow: black;
     }
     .title h2 {
+        margin-top: -70px;
+        font-weight: bold;
         color: #fff;
-        float: none;
+        text-align: center;
+        font-size: 2em;
     }
     .title h3 {
-        padding: 1%;
+        width: 100%;
         color: #fff;
-        float: none;
+        text-align: center;
+        font-size: 1em;
     }
-    .btn-cv {
-        float: none;
-        margin-left: 40%;
-        margin-right: 40%;
+    .banner img {
+        display: block;
+        margin-top: -150px;
+        margin-left: auto;
+        margin-right: auto;
         width: 20%;
+        height: 20%;
+        border-radius: 200px;
+    }
+    /*==============================*/
+    .conteudo-principal {
+        width: 100%;
+        height: 1000px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    /*===========ABOUT===============*/
+    .about {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+        float: left;
+        width: 33%;
+        height: 800px;
+        background-color: transparent;
+        border: #fff;
+        border-radius: solid 5px;
+    }
+    .about img {
+        margin-bottom: 10%;
+        width: 400px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .about h4 {
+        padding: 2%;
+        text-align: center;
+        color: rgb(221, 213, 213);
+        font-weight: bold;
+    }
+    .about p {
+        padding: 5%;
+        text-align: left;
+        color: rgb(221, 213, 213);
+    }
+    /*==============================*/
+    /*===========SKILLS===============*/
+    .skills {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+        float: left;
+        width: 33%;
+        height: 800px;
+        background-color: transparent;
+        border: #fff;
+        border-radius: solid 5px;
+    }
+    .skills #myChart {
+        margin-bottom: 10%;
+        width: 400px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .skills h4 {
+        padding: 2%;
+        text-align: center;
+        color: rgb(221, 213, 213);
+        font-weight: bold;
+    }
+    .skills p {
+        padding: 5%;
+        text-align: left;
+        color: rgb(221, 213, 213);
+    }
+    /*==============================*/
+    /*===========EXPERIENCE==============*/
+    .experience {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+        float: left;
+        width: 33%;
+        height: 800px;
+        background-color: transparent;
+        border: #fff;
+        border-radius: solid 5px;
+    }
+    .experience img {
+        margin-bottom: 10%;
+        width: 400px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .experience h4 {
+        padding: 3%;
+        text-align: center;
+        color: rgb(221, 213, 213);
+        font-weight: bold;
+    }
+    .experience p {
+        padding: 5%;
+        text-align: left;
+        color: rgb(221, 213, 213);
+    }
+    /*==============================*/
+    /*===========CONTACT===============*/
+    .contact {
+        padding-top: 10%;
+        width: 100%;
+        background: url("../images/background-contato.jpg") no-repeat fixed;
+    }
+
+    .contact h4 {
+        margin-top: -5%;
+        padding: 2%;
+        font-size: 1em;
+        text-align: center;
+        color: rgb(221, 213, 213);
+        font-weight: bold;
+    }
+    .contact form {
+        width: 30%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact form input.campo_nome {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.9);
+        border: solid 1px transparent;
+        border-radius: 5px;
+    }
+    .contact form input.campo_email {
+        margin-top: 3%;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.9);
+        border: solid 1px transparent;
+        border-radius: 5px;
+    }
+    .contact form textarea.msg {
+        margin-top: 3%;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.9);
+        border: solid 1px transparent;
+        border-radius: 5px;
+    }
+    .contact input.btn_submit {
+        margin-top: 8%;
+        font-weight: bold;
+        width: 100%;
+        height: 30px;
         color: #fff;
-        font-size: 0.8em;
+        font-size: 1em;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.9);
         border-radius: 5px;
+    }
+    /*==============================*/
+    /*===========RODAPE===============*/
+    .rodape {
+        padding-top: 10%;
+        text-align: center;
+        width: 100%;
+        height: 600px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .social-icons a {
+        font-size: 2em;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .social-icons a:last-child {
+        margin-right: 0;
+    }
+    .social-icons a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .copyright {
+        font-size: 0.8em;
+        padding: 10%;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
     }
     /*==============================*/
 }
